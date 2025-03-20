@@ -7,6 +7,9 @@
 </head>
 <body>
     <form action="calcular.php" method="post">
+    Digite o seu nome:
+    <input type="text" name="nome" size="25" /><br><br>
+
         Menu lanches: <br><br>
         1 – X Burguer (R$6,00) <br>
         2 – X Salada (R$8,00) <br>
@@ -21,6 +24,8 @@
             <option value="4">X Tudo</option>
             <option value="5">X Duplo</option>
         </select><br><br>
+    Digite a quantidade de lanches:
+    <input type="text" name="ql" size="25" /><br><br>
         
         Menu Bebidas: <br><br>
         1 – Água (R$2,00) <br>
