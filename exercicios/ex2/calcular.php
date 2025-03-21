@@ -1,6 +1,6 @@
 <?php
     $nome = $_POST['nome'];
-    $livro = $_POST['livros'];
+    $livros = $_POST['livros'];
     $ql = $_POST['ql'];
     $total = 0;
 
