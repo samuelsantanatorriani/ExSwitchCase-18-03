@@ -6,12 +6,32 @@
 
     switch ($forma) {
         case "1":
-            $total =$valorF -($valorF/100 * 10)
-            echo "O valor final da compra ficou em: R$".$total.",00"
+            $total =$valorF/100 * 90;
+            echo "O valor final da compra ficou em: R$".$total;
             break;
         case "2":
-            $total = $total + (8 * $ql);
-            echo "O valor final da compra ficou em: R$".$total.",00 e as parcelas em: R$".$parcela.",00";
+            
+                if ($qp <= 3)//até 3x 
+                { 
+                    $total = $valorF;
+                    $parcela = $valorF / $qp;
+                    echo "O valor final da compra ficou em: R$".$total." e as ".$qp." parcelas ficaram em: R$".$parcela;
+                }
+                elseif ($qp <= 6)//até 6x
+                {
+                    $parcela = $valorF / $qp + (($valorF/100) *10);
+                    $total = $parcela * $qp;
+
+                    echo "O valor final da compra ficou em: R$".$total." e as ".$qp." parcelas ficaram em: R$".$parcela;
+                }
+                else //maior 6x
+                {
+                    $parcela = $valorF / $qp + (($valorF/100) *20);
+                    $total = $parcela * $qp;
+
+                    echo "O valor final da compra ficou em: R$".$total." e as ".$qp." parcelas ficaram em: R$".$parcela;
+                }
+
             break;   
         default:
             echo "Opção inválida.";
